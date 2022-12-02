@@ -41,17 +41,21 @@ class HomePage extends StatelessWidget {
             TextField(
                 decoration: InputDecoration(
               hintText: 'Airport in Gorakhpur,Uttar Pradesh',
-              prefixIcon: Icon(Icons.search),
+              prefixIcon: const Icon(Icons.search),
               border:
                   OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
             )),
             Container(
-              padding: EdgeInsets.only(top: 20, right: 20, left: 20),
+              padding: const EdgeInsets.only(top: 20, right: 20, left: 20),
               child: Column(children: [
                 Container(
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: const [
-                      Text('abcd'),
+                      Text(
+                        'Office',
+                        style: TextStyle(color: Colors.black),
+                      ),
                       Text('Family'),
                       Text('comfort'),
                       Text('Bussiness'),
@@ -59,6 +63,22 @@ class HomePage extends StatelessWidget {
                     ],
                   ),
                 ),
+                Container(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: const [
+                      Padding(padding: EdgeInsets.only(top: 20, left: 0.0)),
+                      Text(
+                        'Cars Near You',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w700,
+                        ),
+                        textAlign: TextAlign.left,
+                      )
+                    ],
+                  ),
+                )
               ]),
             )
           ])),
