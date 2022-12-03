@@ -1,8 +1,14 @@
+import 'package:car_visit/listview.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -63,22 +69,7 @@ class HomePage extends StatelessWidget {
                     ],
                   ),
                 ),
-                Container(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
-                      Padding(padding: EdgeInsets.only(top: 20, left: 0.0)),
-                      Text(
-                        'Cars Near You',
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.w700,
-                        ),
-                        textAlign: TextAlign.left,
-                      )
-                    ],
-                  ),
-                )
+                const ListviewBuilder(),
               ]),
             )
           ])),
